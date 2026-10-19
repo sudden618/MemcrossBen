@@ -1,0 +1,27 @@
+local_models:
+  qwen3_vl_32b:
+    repo: Qwen/Qwen3-VL-32B-Instruct
+    revision: main  # replace with camera-ready commit SHA
+    weight_license: Apache-2.0
+    access: public
+    precision: bfloat16
+    backend: vLLM
+    quantization: none
+  qwen3_vl_235b:
+    repo: Qwen/Qwen3-VL-235B-A22B-Instruct
+    revision: main  # replace with camera-ready commit SHA
+    weight_license: Apache-2.0
+    access: public
+    precision: bfloat16
+    backend: vLLM-tensor-parallel
+    quantization: none
+
+api_models:
+  # Camera-ready runs must replace these required values. Never use a floating
+  # provider alias without recording the resolved snapshot.
+  judge:
+    provider: REQUIRED
+    exact_model_snapshot: REQUIRED
+    call_date: REQUIRED
+    temperature: 0.0
+    max_output_tokens: 512

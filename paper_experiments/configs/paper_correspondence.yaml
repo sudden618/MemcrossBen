@@ -1,0 +1,8 @@
+# Fill exact section/equation numbers after the final manuscript is available.
+page_index: "Retrieval Experiments / Page Index Construction"
+top_k: "Retrieval Experiments / Top-K Candidate Generation"
+strict_metrics: "Retrieval Experiments / Strict Doc@K and Strict Page@K"
+generation: "Generation Experiments / DirectQA, NaiveRAG and RAG Baselines"
+context: "Generation Experiments / Retrieval Injection and Context Truncation"
+analysis: "Evaluation / Breakdown and Error Analysis"
+overall: "Evaluation / Overall Score"

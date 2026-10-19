@@ -1,0 +1,120 @@
+# Public repository IDs and loading contracts. Replace `main` with the exact
+# commit SHA used for the camera-ready run and retain the resulting manifest.
+models:
+  text_bge:
+    modality: text
+    repo: BAAI/bge-m3
+    revision: main
+    weight_license: MIT
+    access: public
+    precision: bfloat16
+    backend: sentence-transformers
+    quantization: none
+  text_kalm:
+    modality: text
+    repo: tencent/KaLM-Embedding-Gemma3-12B-2511
+    revision: main
+    weight_license: verify-model-card
+    access: public
+    precision: bfloat16
+    backend: sentence-transformers
+    quantization: none
+  text_llama:
+    modality: text
+    repo: nvidia/llama-embed-nemotron-8b
+    revision: main
+    weight_license: NVIDIA-Open-Model-License
+    access: check-model-card
+    precision: bfloat16
+    backend: sentence-transformers
+    quantization: none
+  text_qwen4b:
+    modality: text
+    repo: Qwen/Qwen3-Embedding-4B
+    revision: main
+    weight_license: Apache-2.0
+    access: public
+    precision: bfloat16
+    backend: sentence-transformers
+    quantization: none
+  text_qwen8b:
+    modality: text
+    repo: Qwen/Qwen3-Embedding-8B
+    revision: main
+    weight_license: Apache-2.0
+    access: public
+    precision: bfloat16
+    backend: sentence-transformers
+    quantization: none
+  image_qwen_vl_2b:
+    modality: image
+    repo: Qwen/Qwen3-VL-Embedding-2B
+    revision: main
+    weight_license: Apache-2.0
+    access: public
+    precision: bfloat16
+    backend: transformers
+    quantization: none
+  image_qwen_vl_8b:
+    modality: image
+    repo: Qwen/Qwen3-VL-Embedding-8B
+    revision: main
+    weight_license: Apache-2.0
+    access: public
+    precision: bfloat16
+    backend: transformers
+    quantization: none
+  image_colpali:
+    modality: image
+    repo: vidore/colpali-v1.3-merged
+    revision: main
+    weight_license: Gemma
+    access: requires-Gemma-license-acceptance
+    precision: bfloat16
+    backend: colpali-engine
+    quantization: none
+  image_rzen:
+    modality: image
+    repo: 360zhinao/RzenEmbed
+    revision: main
+    weight_license: verify-model-card
+    access: public
+    precision: bfloat16
+    backend: transformers-remote-code
+    quantization: none
+  image_vdr:
+    modality: image
+    repo: llamaindex/vdr-2b-multi-v1
+    revision: main
+    weight_license: verify-model-card
+    access: public
+    precision: float32
+    backend: sentence-transformers-remote-code
+    quantization: none
+  gme_qwen2_vl_2b:
+    modality: image
+    repo: Alibaba-NLP/gme-Qwen2-VL-2B-Instruct
+    revision: main
+    weight_license: Apache-2.0
+    access: public
+    precision: bfloat16
+    backend: sentence-transformers
+    quantization: none
+  colpali_v1_2:
+    modality: image
+    repo: vidore/colpali-v1.2-merged
+    revision: main
+    weight_license: Gemma
+    access: requires-Gemma-license-acceptance
+    precision: bfloat16
+    backend: colpali-engine
+    quantization: none
+  colqwen2_v1:
+    modality: image
+    repo: vidore/colqwen2-v1.0-merged
+    revision: main
+    weight_license: Apache-2.0
+    access: public
+    precision: bfloat16
+    backend: colpali-engine
+    quantization: none

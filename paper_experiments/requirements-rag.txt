@@ -1,0 +1,8 @@
+# Install after requirements.txt for native RAG retrieval.
+scikit-learn>=1.5
+colpali-engine>=0.3
+
+# HippoRAG 2.0.0-alpha.4 was used by the reference implementation.
+# Its upstream setup pins torch/transformers/vLLM; install it in a separate
+# Python 3.10 environment if those pins conflict with the generation server.
+hipporag==2.0.0a4

@@ -1,0 +1,23 @@
+# Copy this file and replace paths/model revisions for the camera-ready run.
+stages:
+  - name: text_embedding_index
+    command: [python, -m, retrieval.run, build, --pages, data/pages.jsonl,
+              --model, text_qwen8b, --index-dir, outputs/index/text_qwen8b]
+  - name: text_embedding_recall
+    command: [python, -m, retrieval.run, search, --qa, data/qa.jsonl,
+              --model, text_qwen8b, --index-dir, outputs/index/text_qwen8b,
+              --output, outputs/recall/text_qwen8b.jsonl, --top-k, "20"]
+  - name: strict_metrics
+    command: [python, -m, retrieval.run, evaluate, --qa, data/qa.jsonl,
+              --recall, outputs/recall/text_qwen8b.jsonl,
+              --output, outputs/metrics/text_qwen8b.json,
+              --evidence-mode, equivalent]
+  - name: directqa
+    command: [python, -m, generation.run, --method, directqa, --qa, data/qa.jsonl,
+              --output, outputs/generation/directqa.jsonl,
+              --model, Qwen/Qwen3-VL-32B-Instruct, --resume]
+  - name: naive_rag
+    command: [python, -m, generation.run, --method, naive_rag, --qa, data/qa.jsonl,
+              --recall, outputs/recall/text_qwen8b.jsonl, --pages, data/pages.jsonl,
+              --output, outputs/generation/naive_rag.jsonl,
+              --model, Qwen/Qwen3-VL-32B-Instruct, --resume]

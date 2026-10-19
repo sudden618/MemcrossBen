@@ -1,0 +1,13 @@
+name: paper-experiments
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pytorch=2.5
+  - pytorch-cuda=12.4
+  - faiss-cpu=1.9
+  - pip
+  - pip:
+      - -r requirements.txt

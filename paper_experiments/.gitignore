@@ -1,0 +1,16 @@
+.venv/
+.env
+.env.*
+!.env.example
+credentials.*
+secrets.*
+*.pem
+*.key
+*.p12
+*.pfx
+models/
+data/
+index/
+outputs/
+__pycache__/
+*.pyc

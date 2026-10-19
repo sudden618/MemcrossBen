@@ -1,0 +1,3 @@
+{"id": 1, "method": "hand_verified", "model": "none", "seed": 42, "config": {"top_k": 20}, "run_id": "example-run", "recall": [{"file": "alpha", "page": 3, "rank": 1}]}
+{"id": 2, "method": "hand_verified", "model": "none", "seed": 42, "config": {"top_k": 20}, "run_id": "example-run", "recall": [{"file": "beta", "page": 1, "rank": 1}, {"file": "gamma", "page": 2, "rank": 2}]}
+{"id": 3, "method": "hand_verified", "model": "none", "seed": 42, "config": {"top_k": 20}, "run_id": "example-run", "recall": [{"file": "delta", "page": 5, "rank": 1}]}

@@ -1,0 +1,15 @@
+methods:
+  hipporag:
+    # HippoRAG calls separately served LLM and embedding models.
+    backend: graph
+  m3docrag:
+    backend: colpali_maxsim
+    model: colpali_v1_2
+  mdocagent:
+    backend: dual_dense_interleave
+    text_model: text_bge
+    image_model: gme_qwen2_vl_2b
+  vidorag:
+    backend: dense_colqwen_gmm
+    text_model: text_bge
+    image_model: colqwen2_v1

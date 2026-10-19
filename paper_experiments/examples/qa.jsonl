@@ -1,0 +1,3 @@
+{"id": 1, "question": "Which pages provide the complete answer?", "answer": "Document alpha pages 1 and 2.", "type": "Text", "subset": "Papers", "evidence_sets": [[{"file": "alpha", "pages": [1, 2]}], [{"file": "alpha", "pages": [3]}]]}
+{"id": 2, "question": "Which patent and paper jointly support the claim?", "answer": "Patent beta and paper gamma jointly support it.", "type": "Figure", "subset": "Patents", "evidence_sets": [[{"file": "beta", "pages": [1]}, {"file": "gamma", "pages": [2]}]]}
+{"id": 3, "question": "What metadata identifies the item?", "answer": "The identifier appears on delta page 5.", "type": "Meta", "subset": "Papers", "evidence_sets": [[{"file": "delta", "pages": [5]}]]}
